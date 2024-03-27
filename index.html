@@ -11,15 +11,13 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <div class="input-group input-group-lg">
-        <span class="input-group-text" id="inputGroup-sizing-lg">inserisci</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" id="input73">
-      </div>
-
-      <button type="submit" class="btn btn-primary" id="btn-submit37">controllo</button> -->
-      <div id="risposta">
-        <h1> {{ message }} </h1>
-        <img v-bind:src="url" alt="">
+    <div id="risposta">
+          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" v-model="nome">
+            {{ this.saluta() }}
+            <h1> {{ message }} </h1>
+            <img v-bind:src="this.randomUrl(this.url)" alt="">
+            <img v-bind:src="this.randomUrl(this.url2)" alt="">
+            <p v-if="show"> cio</p>
       </div>
 </body>
 </html>
